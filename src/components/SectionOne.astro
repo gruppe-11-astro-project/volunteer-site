@@ -1,0 +1,14 @@
+---
+const { title, backgroundColor } = Astro.props;
+---
+
+<section style=`background-color:${backgroundColor};`>
+  <h2>{title}</h2>
+  <slot />
+</section>
+
+<style>
+  .section {
+  padding: 2rem;
+}
+</style>

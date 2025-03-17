@@ -1,0 +1,42 @@
+---
+const { text, variant } = Astro.props;
+---
+
+<button class={variant}>{text}</button>
+
+<style> 
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dark{
+color: #fff;
+  background-color: #000;
+}
+
+.dark:hover{
+     background-color: #555;
+}
+
+.light:hover{
+  color: #000;
+  background-color: #fff;  
+}
+
+.light {
+  color: #000;
+  background-color: #fff;
+}   
+
+.light:hover {
+  background-color: #b8b8b8;
+}
+</style>
