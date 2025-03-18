@@ -6,3 +6,52 @@ body {
 html {
   box-sizing: border-box;
 }
+
+html {
+  /* 🎨 Primary Colors */
+  --primary: #0874ac;
+  --secondary: #054f73;
+
+  /* 🎨 Accent Colors */
+  --accent: #5dc5bb;
+  --highlight: #7edcff;
+
+  /* 🎨 Backgrounds */
+  --bg-light: white;
+  --bg-dark: black;
+}
+
+/*********fonts*************/
+.noto-sans-normal {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.crimson-text-bold {
+  font-family: "Crimson Text", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+p {
+  font-family: Noto Sans;
+  font-size: clamp(13px, 1.5vw, 20px);
+  color: var(--primary);
+}
+
+.section-about {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  margin-top: 5rem;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(./imgs/grass.svg);
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}

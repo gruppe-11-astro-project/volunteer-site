@@ -2,6 +2,8 @@
 import "../styles/style.css";
 import SectionOne from"../components/SectionOne.astro"; 
 import Button from "../components/Button.astro";
+import Header from "../components/Header.astro";
+import ImgSection from "../components/ImgSection.astro";
 ---
 
 <!doctype html>
@@ -9,14 +11,29 @@ import Button from "../components/Button.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	
+<!-- p font -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<!-- h1 font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <title>Astro Fra Html</title>
     
 
   </head>
   <body>
-   <SectionOne title="Our Team" backgroundColor="#f3f4f6">
-	<Button variant="dark" text="Bliv frivillig"></Button>
-      
-    </SectionOne>
+	 <Header title="Bliv frivillig" title2="Misbrugsportalen">
+		<p class="headertxt">Støtte og rådgivning til dem, der har brug for det mest.</p>
+    </Header>
+	<ImgSection imageSrc="./imgs/support3image.webp" imageAlt="3 Piger støtter hinanden"/>
+	<section class="section-about">
+		<h2>HJÆLP TIL MISBRUGERE OG PÅRØRENDE</h2>
+		<p>Rådgivning til mennesker i direkte eller indirektekontakt med konsekvenserne af afhængighed. (misbrugeren, forældre, søskende, samlevere, anden familie mv.)</p>
+	</section>
+ 
   </body>
 </html>
