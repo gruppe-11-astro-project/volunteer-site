@@ -35,6 +35,18 @@ html {
   font-style: normal;
 }
 
+.asap-condensed-light {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Asap Condensed";
+  font-size: clamp(25px, 5vw, 55px);
+  color: var(--secondary);
+}
+
 p {
   font-family: Noto Sans;
   font-size: clamp(13px, 1.5vw, 20px);
@@ -46,12 +58,20 @@ p {
   flex-direction: column;
   padding: 3rem 5rem;
   margin-top: 5rem;
+  margin-bottom: 0;
   height: 40vh;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-image: url(./imgs/grass.svg);
-  background-size: contain;
+  background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+}
+
+/*********grids*************/
+.grid1_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
