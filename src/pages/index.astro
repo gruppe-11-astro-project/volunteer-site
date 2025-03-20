@@ -9,6 +9,7 @@ import Roundbut from "../components/Roundbut.astro";
 import Footer from "../components/Footer.astro";
 import SectionTwo from "../components/SectionTwo.astro";
 import Card from "../components/Card.astro";
+import Kontakt from "../components/Kontakt.astro";
 
 ---
 
@@ -48,6 +49,7 @@ import Card from "../components/Card.astro";
   
     <ImgSection imageSrc="./imgs/support3image.webp" imageAlt="3 Piger støtter hinanden"/>
     <section class="section-about">
+		<Roundbut/>
         <h2>HJÆLP TIL MISBRUGERE OG PÅRØRENDE</h2>
         <p>Rådgivning til mennesker i direkte eller indirekte kontakt med konsekvenserne af afhængighed. (misbrugeren, forældre, søskende, samlevere, anden familie mv.)</p>
     </section>
@@ -81,6 +83,27 @@ import Card from "../components/Card.astro";
 		</div>
 
 	 </SectionTwo>
+
+	  <Kontakt title="KONTAKT OS DIREKTE" bgImageSrc="./imgs/blueBg.svg">
+        <div class="contact-div">
+            
+               <ul>
+				<li>Ring til vores Sekratiat</li>
+				<li>Pårørende Netværket - MisbrugsportalenBagsværd<br>S Hovedgade 126, 2880 Bagsværd</li>
+				<li></li>
+			   </ul>
+
+			   <ul>
+				<li>Mandag - tirsdag: 15.00 - 18.00</li>
+				<li>Onsdag - fredag: 18.00 - 21.00</li>
+
+				<li>TLF:**70 60 44 46**</li>
+				<li>MAIL:mail@misbrugsportalen.dk</li>
+			   </ul>
+            
+           
+        </div>
+    </Kontakt>
 	
 </body>
 <Footer/>
