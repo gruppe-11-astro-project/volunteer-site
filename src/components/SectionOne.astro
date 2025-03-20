@@ -15,7 +15,8 @@ const { title, backgroundColor } = Astro.props;
 
   p{
   color:white ;
-  font-size: clamp(9px, 1vw, 15px);
+  margin-top: 0;
+ 
 
   }
 
@@ -33,5 +34,19 @@ const { title, backgroundColor } = Astro.props;
     height: auto;
    
   }
+
+    @media (max-width: 600px) {
+      .grid1_1-1{
+        display:block;
+    }
+
+    p{
+      margin-bottom:1rem;
+      
+ 
+
+  }
+}
+
 }
 </style>
