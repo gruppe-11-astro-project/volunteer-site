@@ -1,0 +1,52 @@
+---
+const {title, text} =Astro.props;
+import Card from "./Card.astro";
+---
+
+<section>
+    <div class="grid2_1-1">
+    <div class="text-div">
+   <h2>{title}</h2>
+   <p>{text}</p>
+    </div>
+<slot/>
+
+</div>
+</section>
+
+
+<style>
+    section{
+    padding: 2rem;
+
+    .text-div{
+        min-width: 320px;
+        flex-shrink: 0; 
+    }
+    
+    .grid2_1-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+
+    @media (max-width: 600px) {
+      padding: 2rem;  
+      display: block;
+
+      .grid2_1-1{
+        display:block;
+    }
+
+       .grid1_1-1{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    }
+    
+    }
+</style>
