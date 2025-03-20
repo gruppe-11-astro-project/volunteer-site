@@ -7,34 +7,71 @@ const {imageSrc, imageAlt} =Astro.props;
     <div class="imgContainer">
 <img src=`${imageSrc}` alt=`Image og ${imageAlt}` />
 </div>
-<Button variant="light" text="Button here"></>
+ <div class="curve"></div>
+
+ <div class="arrow-burger">
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+            </div>
 </section>  
 
 
 <style>
     section{
         position: relative;
+        overflow: hidden;
 
         
         .imgContainer{
             width: 100%;
             height: fit-content;
-        clip-path: ellipse(100% 85% at 50% 100%);
+            position: relative;
+            overflow: hidden;
+
         }
+
+          .curve {
+
+                position: absolute;
+                top: -30%; 
+                right:-10.5%;
+                width: 120vw;
+                height: 50%;
+                background-color: white;
+                border-bottom-left-radius: 60% 100%;
+                border-bottom-right-radius: 60% 100%;
+          
+                z-index: 2;
+            }
 
         img{
             width: 100%;
-            height: auto;
-            aspect-ratio:16/9;
-            height: auto;
+            display: block;
+            object-fit: cover;
+            
         }
-           
-        Button{
+           .arrow-burger {
+            width: 70px;
+            height: 65px;
+            cursor: pointer;
+            background-color:white;
             position: absolute;
-            top:3%;
-            left: 50%;
-            max-width: fit-content;
-           
-        }
+            top:1.5%;
+            right: 47.5%; 
+            z-index: 3;
+            }
+
+            .arrow-burger .arrow {
+                display: flex;
+                background-color: black;
+                width: 100%;
+                height: 30px;
+                clip-path: polygon(0% 0%, 100% 0%, 50% 100%); 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+                }
     }
 </style>
