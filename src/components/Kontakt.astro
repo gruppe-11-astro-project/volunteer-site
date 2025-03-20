@@ -1,0 +1,45 @@
+---
+const {title, bgImageSrc} = Astro.props;
+---
+
+<article class="card" style={`background-image: url(${bgImageSrc});`}>
+  <h2>{title}</h2>
+  <slot/>
+</article>
+
+<style>
+    article{
+       
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        background-size: 100% auto;
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: -1;
+        margin-top: -80px;
+
+
+        h2{
+        color: white;
+        position: absolute;
+        left: 1%;
+        top:10%;
+         -webkit-text-stroke: 0.9px #177F76;
+
+        }
+
+        @media (max-width: 600px) {
+           background-size: cover;
+           height: 50vh;
+
+   } 
+}
+
+
+    
+</style>
