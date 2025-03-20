@@ -1,0 +1,53 @@
+---
+const {title,title2} =Astro.props;
+---
+
+<header>
+<h1>{title}</h1>
+<h2>{title2}</h2>
+<slot/>
+</header>
+
+
+<style>
+  header {
+  background-color: var(--bg-light);
+    height: 70vh;
+    position: relative;
+    
+ 
+
+
+
+  h1{
+    font-family: "Crimson Text";
+      font-size: clamp(40px, 7vw, 100px);
+    color:var(--primary);
+    padding: 0.5rem 0;
+    margin: 0;
+    max-width: fit-content;
+    position: absolute;
+    top:25%;
+    left:25%;
+  }
+
+  h2{
+     font-family: "Crimson Text";
+     background-color: var(--accent);
+    font-size: clamp(40px, 7vw, 100px);
+    color: var(--bg-light);
+    padding: 0.5rem 0;
+    margin: 0;
+    max-width: fit-content;
+     position: absolute;
+   bottom:25%;
+    left:32%;
+  }
+
+  .headertxt{
+    position: absolute;
+    bottom:12.5% ;
+    left:36.5%;
+  }
+}
+</style>

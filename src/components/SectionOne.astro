@@ -8,7 +8,29 @@ const { title, backgroundColor } = Astro.props;
 </section>
 
 <style>
-  .section {
+  section {
   padding: 2rem;
+  background-color: var(--secondary);
+  margin-top: 0;
+
+  p{
+  color:white ;
+  font-size: clamp(9px, 1vw, 15px);
+
+  }
+
+  h2{
+    color:white
+  }
+
+ .img-case{
+    width: 600px;
+  }
+
+  .img-case img{
+    width:100%;
+    height: auto;
+   
+  }
 }
 </style>

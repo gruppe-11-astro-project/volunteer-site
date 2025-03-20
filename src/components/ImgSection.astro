@@ -1,0 +1,40 @@
+---
+import Button from "./Button.astro";
+const {imageSrc, imageAlt} =Astro.props;
+---
+
+<section>
+    <div class="imgContainer">
+<img src=`${imageSrc}` alt=`Image og ${imageAlt}` />
+</div>
+<Button variant="light" text="Button here"></>
+</section>  
+
+
+<style>
+    section{
+        position: relative;
+
+        
+        .imgContainer{
+            width: 100%;
+            height: fit-content;
+        clip-path: ellipse(100% 85% at 50% 100%);
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            aspect-ratio:16/9;
+            height: auto;
+        }
+           
+        Button{
+            position: absolute;
+            top:3%;
+            left: 50%;
+            max-width: fit-content;
+           
+        }
+    }
+</style>
