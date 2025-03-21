@@ -8,6 +8,7 @@ import Navigation from "../components/Navigation.astro";
 import Roundbut from "../components/Roundbut.astro";
 import Footer from "../components/Footer.astro";
 import SectionTwo from "../components/SectionTwo.astro";
+import SectionThree from "../components/SectionThree.astro";
 import Card from "../components/Card.astro";
 import Kontakt from "../components/Kontakt.astro";
 ---
@@ -69,19 +70,12 @@ import Kontakt from "../components/Kontakt.astro";
         </div>
     </SectionOne>
 
-     <div class="container">
-        <div class="image-container">
-            <img src="imgs/support3image.webp" alt="Gruppe af mennesker omfavner hinanden">
-        </div>
-        <div class="text-container">
-            <p>Misbrugsportalen er mere end en støttelinje – det er et fællesskab af mennesker, der forstår, lytter og
-                hjælper hinanden.</p>
-            <p>Som frivillig bliver du en del af et stærkt netværk, hvor vi sammen arbejder for at gøre en positiv
-                forskel.</p>
-            <a href="#" class="cta-button">GØR EN FORSKEL</a>
-        </div>
-    </div>
-    
+    <SectionThree ImgSrc="./imgs/helpinghand.webp" >
+        <p>Misbrugsportalen er mere end en støttelinje – det er et fællesskab af mennesker, der forstår, lytter og hjælper hinanden.</p>
+        <p>Som frivillig bliver du en del af et stærkt netværk, hvor vi sammen arbejder for at gøre en positiv forskel.</p>
+        <Button link="https://www.misbrugsportalen.dk/bliv-medlem.aspx?_gl=1*j2qoee*_ga*NzQ5NDEwODI0LjE3NDI1NDY5Mzk.*_up*MQ..*_ga_0R6LDEM2LW*MTc0MjU0NjkzOC4xLjAuMTc0MjU0NjkzOC4wLjAuMA.." text="GØR EN FORSKEL"></Button>
+    </SectionThree>
+
 	 <SectionTwo title="HØR FRA NOGLE AF VORES FRIVILLIGE!" text="Vores frivillige kommer fra alle samfundslag, forenet af et fælles mål: at støtte dem, der har brug for hjælp. Uanset om du lytter, deltager i oplysningsarbejde eller hjælper bag kulisserne, betyder din indsats noget.">
 		<div id="hfus" class="grid1_1-1">
 			<Card quote="At være en del af fællesskabet betyder at støtte – og selv blive støttet -Anonym" bgImageSrc="./imgs/helpinghand.webp" ImageSrc="./imgs/quotationmarks.svg">
@@ -117,6 +111,21 @@ import Kontakt from "../components/Kontakt.astro";
            
         </div>
     </Kontakt>
+    <section class="end-section">
+        <h2>
+            FORANDRING STARTER MED<br>MENNESKER, DER BRYDER SIG OM ANDRE
+        </h2>
+            <div class="grid3_1-1">
+                <div class="img-case"><img src="./imgs/shoulderHand.svg" alt="billed af en hånd på skulderen"></div>
+                <div>
+                    <p>Uanset din baggrund eller erfaring kan din indsats gøre en forskel. Som frivillig hos Misbrugsportalen bliver du en del af et engageret fællesskab, der arbejder for en vigtig sag.</p>
+                </div>
+                
+            </div>
+            <Button link="https://www.misbrugsportalen.dk/bliv-medlem.aspx?_gl=1*j2qoee*_ga*NzQ5NDEwODI0LjE3NDI1NDY5Mzk.*_up*MQ..*_ga_0R6LDEM2LW*MTc0MjU0NjkzOC4xLjAuMTc0MjU0NjkzOC4wLjAuMA.." text="GØR EN FORSKEL"></Button>
+        
+
+    </section>
 	
 </body>
 <Footer bgColor="var(--bg-dark)"/>

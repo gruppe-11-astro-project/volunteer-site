@@ -1,8 +1,8 @@
 ---
-const { text, variant, size } = Astro.props;
+const { link,text, variant, size } = Astro.props;
 ---
 
-<button class={`${variant} ${size}`}>
+<button class={`${variant} ${size}`} onclick={`window.location.href='${link}'`}>
   {text}
 </button>
 
