@@ -1,8 +1,11 @@
 ---
-
 ---
 <div class="menuheader">
-<p class="logo"><a href="#">LOGO</a></p>
+ <div class="logo">
+            <a href="./index.astro/sec1">
+                <img src="../imgs/MPlogo.svg" alt="Logo">
+            </a>
+        </div>
 <nav>
   <ul class="menu">
     <li><a href="#">BLIV MEDLEM</a></li>
@@ -20,6 +23,17 @@
 
 <style>
 
+  .logo {
+  width: 200px;
+  height: 100%;
+}
+
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+
+
   .menuheader{
   position: sticky;
   top: 0;
@@ -27,24 +41,33 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  padding-left: 0px;
   background: none;
   z-index: 1000;
-  background-color: var(--accent);
-}
+  
+  }
   
   nav {
-  padding: 0.25rem 2rem;
-  background-color: var(--bg-light);
+  padding: 0.25rem;
+  background-color: var(--accent);
   color: var(--bg-light);
-}
-nav {
+  border-radius: 5rem;
+  border-top-right-radius:0 ;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  /* border-left: 2px solid var(--primary);
+  border-top: 2px solid var(--primary); */
 }
 
-nav li {
+.menu li {
   color: var(--primary)
+  font-family: Noto Sans;
+  list-style: none;
+  font-size: clamp(13px, 1.5vw, 20px);
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+
 }
 
 .menu {
@@ -65,7 +88,8 @@ nav li {
 .menu a {
   display: block;
   padding: 10px;
-  color: var(--primary);
+  color: var(--bg-light);
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
@@ -77,28 +101,47 @@ nav li {
 
 .burger {
   width: 30px;
-  height: 20px;
+  height: 25px;
   cursor: pointer;
-  background-color: #1b1c1d;
+  background-color: var(--bg-light);
+  display: none;
 }
 
 .burger .line {
   width: 100%;
   height: 2px;
-  background-color: #ffffff;
+  background-color: var(--accent);
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
-.burger {
-  display: none;
-}
+
 @media screen and (max-width: 800px) {
+
+    .menuheader{
+  padding: 5px;
+ 
+  
+  }
+
+    .logo {
+  width: 150px;
+  height: 100%;
+}
+
   .menu {
     display: none;
   }
   .burger {
     display: block;
   }
+
+   nav {
+    
+  border-radius: 0;
+  padding: 0;
+  border-left:none;
+  border-top: none;
+}
   .burger.active .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
     transition: 0.2s linear;
@@ -140,3 +183,28 @@ nav li {
   }
 }
 </style>
+
+<!-- <script client:load>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menuheader");
+
+  if (burger && nav && menu) {
+    burger.addEventListener("click", burgerClick);
+    menu.addEventListener("click", menuClick);
+
+    function burgerClick() {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+    }
+
+    function menuClick() {
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+    }
+  } else {
+    console.warn("One or more elements are missing.");
+  }
+});
+</script> -->

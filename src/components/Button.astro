@@ -1,13 +1,6 @@
 ---
 const { text, variant, size } = Astro.props;
 ---
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200&display=swap');
-
-button {
-  font-family: "Asap Condensed", sans-serif;
-}
-</style>
 
 <button class={`${variant} ${size}`}>
   {text}
@@ -15,7 +8,7 @@ button {
 
 <style> 
 button {
-  
+  font-family: "Asap Condensed", sans-serif;
   border: none;
   outline: 0;
   display: inline-block;
@@ -24,9 +17,11 @@ button {
   background-color: #5DC5BB;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: fit-content;
+  min-width: 100px;
   font-family: "Asap Condensed", sans-serif;
-  font-size: 20px;
+  font-size: clamp(20px, 2vw, 70px);
+  font-weight: 700;
   border-radius: 25px;
    border: 2px solid #054F73; 
   

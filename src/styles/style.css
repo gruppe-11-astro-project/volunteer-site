@@ -88,7 +88,7 @@ li {
 }
 
 .section-about p {
-  max-width: 65ch; /* Limits to ~50 characters per line */
+  max-width: 65ch;
 }
 
 /*********grids*************/
