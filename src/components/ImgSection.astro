@@ -10,7 +10,7 @@ const {imageSrc, imageAlt} =Astro.props;
  <div class="curve"></div>
 
  <div class="arrow-burger">
-    <a href="/index#roundbtn"></a>
+    <a href="#roundbtn"></a>
             </div>
             
 </section>  
@@ -20,6 +20,7 @@ const {imageSrc, imageAlt} =Astro.props;
     section{
         position: relative;
         overflow: hidden;
+       z-index: 1;
 
         
         .imgContainer{
@@ -61,7 +62,7 @@ const {imageSrc, imageAlt} =Astro.props;
             position: absolute;
             top:0.5%;
             left: 43.5%; 
-            z-index: 3;
+            z-index: 900;
             transition: transform 0.3s ease-in-out;
             }
 
