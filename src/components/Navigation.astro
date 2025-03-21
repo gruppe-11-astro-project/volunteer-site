@@ -1,42 +1,136 @@
 ---
 
-
 ---
-
+<div class="menuheader">
+<p class="logo"><a href="#">LOGO</a></p>
 <nav>
-  <p class="logo"><a href="#">LOGO</a></p>
-  <ul>
+  <ul class="menu">
     <li><a href="#">BLIV MEDLEM</a></li>
     <li><a href="#">MØD VORES FRIVILLIGE</a></li>
      <li><a href="#">OM OS</a></li>
   </ul>
+
+  <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
 </nav>
+</div>
 
 <style>
-  nav {
-  padding: 0.25rem 2rem;
-  background-color: var(--bg-light);
-  color: var(--bg-light);
+
+  .menuheader{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-
-
-
-a {
- 
-   font-family: "Asap Condensed";
-    color: var(--primary);
-  font-size:22px;
-  text-decoration: none;
+  
+  nav {
+  padding: 0.25rem 2rem;
+  background-color: var(--bg-light);
+  color: var(--bg-light);
 }
-
-ul {
-  list-style-type: none;
+nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+}
+
+nav li {
+  color: var(--primary)
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: black;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  background-color: #1b1c1d;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #1b1c1d;  
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgb(162, 226, 58, 0.5);
+    z-index: 1000;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+@media (min-width: 800px) {
+  .menu li:last-child a {
+    border-radius: 5px;
+    padding: 10px;
+  }
 }
 </style>
