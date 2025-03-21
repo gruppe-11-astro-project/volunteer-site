@@ -10,7 +10,7 @@ const {imageSrc, imageAlt} =Astro.props;
  <div class="curve"></div>
 
  <div class="arrow-burger">
-                
+    <a href="/index#roundbtn"></a>
             </div>
             
 </section>  
@@ -54,7 +54,7 @@ const {imageSrc, imageAlt} =Astro.props;
             width: 15vw;
            aspect-ratio: 16/9;
             cursor: pointer;
-            background-image:url(./imgs/updatedarrow.svg);
+            background-image:url(./imgs/downarrow.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -62,8 +62,20 @@ const {imageSrc, imageAlt} =Astro.props;
             top:0.5%;
             left: 43.5%; 
             z-index: 3;
+            transition: transform 0.3s ease-in-out;
             }
 
+            .arrow-burger:hover{
+                background-image: url(./imgs/dArrowDark.svg);
+                transform: scale(1.1);
+            }
+
+
+            @media (max-width: 600px) {
+             .arrow-burger {
+                display: none;
+             }   
+            }
             
 
             
