@@ -1,50 +1,58 @@
 ---
-const { title, backgroundColor } = Astro.props;
+const {ImgSrc} = Astro.props;
 ---
 
-<section style=`background-color:${backgroundColor};`>
-  <h2>{title}</h2>
-  <slot />
+<section>
+  <div class="grid1_1-1">
+    <div class="imgCase">
+    <img class="round-img" src=`${ImgSrc}` alt="round image" />
+</div>
+<div>
+<slot />
+</div>
+  </div>
 </section>
   
   <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+    
+    section{
+        padding: 20px 30px;
+        margin-bottom: 4rem;
+        height: fit-content;
+     .imgCase{
+     width:500px; 
+     height: 500px;
+     overflow:hidden ;
+     border-radius: 50%;
+    } 
 
-        .container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+    .round-img{
+      width: 100%;  
+      height: 100%;
+      object-fit: cover;
+    }
+    .grid1_1-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+   
 
-        .image-container {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
+    @media (max-width: 800px) {
+     .imgCase{
+       width:350px; 
+     height: 350px;  
+     } 
+     
+      .grid1_1-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .text-container {
-            max-width: 400px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #59c5c6;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            border: 2px solid #2e7d7e;
-            margin-top: 10px;
-        }
+    .grid1_1-1 div {
+    margin-bottom: 1rem;
+    }
+    } 
+}
     </style>
